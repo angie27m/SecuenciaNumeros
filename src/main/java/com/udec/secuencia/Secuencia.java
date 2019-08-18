@@ -13,8 +13,7 @@ import java.util.Scanner;
  * @version 1.0
  */
 public class Secuencia {
-
-    private byte[] numeros;
+private byte[] numeros;
     private int[] cadena;
     private String[] arraySecuencia;
     /**
@@ -89,6 +88,7 @@ public class Secuencia {
     public void NumerosFaltantes() {
         int minimo = cadena[0];
         int maximo = minimo;
+        try{
         for (int i = 0; cadena[i] != 255; i++) {
             if (cadena[i] == maximo) {
                 maximo++;
@@ -97,6 +97,9 @@ public class Secuencia {
                 maximo++;
                 i--;
             }
+        }
+        }catch(Exception e){
+            
         }
     }
 }
